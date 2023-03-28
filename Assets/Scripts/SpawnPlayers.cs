@@ -14,7 +14,7 @@ public class SpawnPlayers : MonoBehaviour
     public float maxY;
     public float minZ;
     public float maxZ;
-    public float startDelay = 5.0f;
+    public float startDelay = 2.0f;
 
     private void Start()
     {

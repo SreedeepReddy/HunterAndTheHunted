@@ -13,13 +13,15 @@ public class LobbyMenu : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         PhotonNetwork.CreateRoom(createRoomCode.text);
-        LobbyMenuManager.OpenMenu(LobbyMenus.CharacterSelectionMenu, gameObject);
+        PhotonNetwork.LoadLevel("Level");
+        // LobbyMenuManager.OpenMenu(LobbyMenus.CharacterSelectionMenu, gameObject);
     }
 
     public void JoinRoom()
     {
         PhotonNetwork.JoinRoom(joinRoomCode.text);
-        LobbyMenuManager.OpenMenu(LobbyMenus.CharacterSelectionMenu, gameObject);
+        PhotonNetwork.LoadLevel("Level");
+        // LobbyMenuManager.OpenMenu(LobbyMenus.CharacterSelectionMenu, gameObject);
     }
 
     public void Back()

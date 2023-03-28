@@ -6,13 +6,17 @@ using Photon.Pun;
 
 public class CharacterSelectionMenu : MonoBehaviour
 {
+    public GameObject character;
     public void Hunter()
     {
-        PhotonNetwork.LoadLevel("Level");
+        character.GetComponent<SetCharacter>().isHunter = true;
+        GameObject.Find("CharacterSelectionCanvas").gameObject.SetActive(false);
+        
     }
 
     public void Hunted()
     {
-        PhotonNetwork.LoadLevel("Level");
+        character.GetComponent<SetCharacter>().isHunted = true;
+        GameObject.Find("CharacterSelectionCanvas").gameObject.SetActive(false);
     }
 }
