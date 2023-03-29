@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public GameObject cameraObj;
     public bool joyStickMode;
-    public float speed = 5f;
+    public float speed = 20f;
 
     public CharacterController charCntrl;
     public PhotonView view;
