@@ -21,13 +21,14 @@ public class CharacterMovement : MonoBehaviour
     {
         if (view.IsMine)
         {
+            //Get horizontal and Vertical movements
             float horComp = Input.GetAxis("Horizontal");
             float vertComp = Input.GetAxis("Vertical");
 
             if (joyStickMode)
             {
-                horComp = Input.GetAxis("Vertical");
-                vertComp = -Input.GetAxis("Horizontal");
+                vertComp = Input.GetAxis("Vertical");
+                horComp = Input.GetAxis("Horizontal") * 1;
             }
 
             Vector3 moveVect = Vector3.zero;
