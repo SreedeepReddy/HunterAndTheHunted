@@ -8,6 +8,7 @@ public class OpenCharacterMenu : MonoBehaviour
     public GameObject character;
     public GameObject reticle;
     public EventSystem eventSystem;
+    public GameObject firstSelected;
 
     private void Start()
     {
@@ -15,5 +16,7 @@ public class OpenCharacterMenu : MonoBehaviour
         reticle.SetActive(false);
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = false;
         eventSystem.GetComponent<StandaloneInputModule>().enabled = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstSelected);
     }
 }
