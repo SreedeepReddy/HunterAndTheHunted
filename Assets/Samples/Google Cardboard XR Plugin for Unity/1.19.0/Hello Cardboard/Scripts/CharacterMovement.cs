@@ -15,6 +15,10 @@ public class CharacterMovement : MonoBehaviour
     {
         charCntrl = GetComponent<CharacterController>();
         view = GetComponent<PhotonView>();
+        if (view.IsMine == false) 
+        {
+            cameraObj.SetActive(false);
+        }
     }
 
     void Update()

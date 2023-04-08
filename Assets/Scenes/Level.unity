@@ -26398,7 +26398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094c559e8e6f90c4f92440d1e19d2e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5285246111171256535, guid: 4828892cc0faee0469d7011d1dd1cd82, type: 3}
+  player: {fileID: 941895944265185461, guid: 6c8e3dcd42b066c448a3dff6cf49034d, type: 3}
   minX: -10
   maxX: 10
   minY: 1.5

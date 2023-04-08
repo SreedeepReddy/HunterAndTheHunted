@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 
 public class SpawnPlayers : MonoBehaviour
 {
