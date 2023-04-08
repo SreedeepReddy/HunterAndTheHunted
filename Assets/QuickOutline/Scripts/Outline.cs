@@ -54,13 +54,13 @@ public class Outline : MonoBehaviour {
   }
 
   [SerializeField]
-  private Mode outlineMode;
+  public Mode outlineMode;
 
-  [SerializeField]
-  private Color outlineColor = Color.white;
+  //[SerializeField]
+  public Color outlineColor = Color.white;
 
   [SerializeField, Range(0f, 10f)]
-  private float outlineWidth = 8f;
+  public float outlineWidth = 8f;
 
   [Header("Optional")]
 

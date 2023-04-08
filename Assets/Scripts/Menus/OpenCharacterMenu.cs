@@ -1,36 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OpenCharacterMenu : MonoBehaviour
 {
-    public GameObject characterSelectionMenu;
     public GameObject character;
-    private bool triggerMenu = false;
+    public GameObject reticle;
+    public EventSystem eventSystem;
 
-
-    void CharacterMenu()
+    private void Start()
     {
-        characterSelectionMenu.SetActive(true);
-        characterSelectionMenu.transform.Find("CharacterSelectionMenu").GetComponent<CharacterSelectionMenu>().character = character;
-        triggerMenu = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (GameObject.Find("Character(Clone)")) 
-        {
-            if (!GameObject.Find("Character(Clone)").gameObject.GetComponent<SetCharacter>().isHunted && !GameObject.Find("Character(Clone)").gameObject.GetComponent<SetCharacter>().isHunter)
-            {
-                character = GameObject.Find("Character(Clone)");
-                triggerMenu = true;
-            }
-        }        
-
-        if (triggerMenu) 
-        {
-            CharacterMenu();
-        }
+        character.GetComponent<CharacterMovement>().speed = 0;
+        reticle.SetActive(false);
+        eventSystem.GetComponent<XRCardboardInputModule>().enabled = false;
+        eventSystem.GetComponent<StandaloneInputModule>().enabled = true;
     }
 }

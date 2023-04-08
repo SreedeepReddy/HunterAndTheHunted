@@ -14,4 +14,5 @@ public class SetCharacter : MonoBehaviour
             this.GetComponentInChildren<Camera>().enabled = true;
         }
     }
+
 }
