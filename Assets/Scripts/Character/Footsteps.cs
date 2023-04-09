@@ -16,7 +16,7 @@ public class Footsteps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cc.velocity.magnitude > 2f && faudio.isPlaying == false)
+        if(cc.isGrounded == true && cc.velocity.magnitude > 2f && faudio.isPlaying == false)
         {
             faudio.volume = Random.Range(0.8f, 1);
             faudio.pitch = Random.Range(0.8f, 1.1f);
