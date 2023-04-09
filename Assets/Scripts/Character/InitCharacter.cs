@@ -9,6 +9,7 @@ public class InitCharacter : MonoBehaviour
     public Material hunterRed;
     public Material huntedBlue;
     public PhotonView photonView;
+    public GameObject spotLight;
     private void InitHunter()
     {
         this.AddComponent<Outline>();
@@ -24,6 +25,8 @@ public class InitCharacter : MonoBehaviour
         renderer.material = hunterRed;
 
         this.GetComponent<CharacterMovement>().speed = 1500;
+
+        spotLight.AddComponent<RenderLight>();
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, true);
     }
