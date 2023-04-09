@@ -12,6 +12,12 @@ public class CharacterSelectionMenu : MonoBehaviour
     public GameObject characterSelectionCanvas;
     public GameObject reticle;
     public EventSystem eventSystem;
+    public GameObject XRRig;
+
+    public void Awake() 
+    {
+        XRRig.GetComponent<XRCardboardController>().EnableVRCoroutine();
+    }
 
     public void Start()
     {
