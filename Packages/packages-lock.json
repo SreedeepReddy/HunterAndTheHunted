@@ -10,6 +10,12 @@
       },
       "hash": "3849789abdda4140219eec4d524a02e15e1548fe"
     },
+    "com.kybernetik.inspector-gadgets": {
+      "version": "file:com.kybernetik.inspector-gadgets",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.7",
       "depth": 0,
