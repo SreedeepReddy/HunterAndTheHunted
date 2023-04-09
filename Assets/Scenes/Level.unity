@@ -26380,12 +26380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4956428390567298301, guid: 738404cc2f840834bbaa84e17ab50da4, type: 3}
-  minX: -10
-  maxX: 10
+  minX: -25
+  maxX: 1
   minY: 1
   maxY: 1
-  minZ: -10
-  maxZ: 10
+  minZ: 0
+  maxZ: 30
   startDelay: 1
 --- !u!1 &771631132
 GameObject:

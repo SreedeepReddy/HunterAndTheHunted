@@ -2408,6 +2408,8 @@ MonoBehaviour:
   reticle: {fileID: 4956428390567298274}
   eventSystem: {fileID: 4956428390567298275}
   firstSelected: {fileID: 4684402796191430297}
+  vrGroup: {fileID: 2000225150463569942}
+  charMenu: {fileID: 8250199988925173876}
 --- !u!1 &5004353223057744155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,7 +3351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7222579384802879486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3390,6 +3392,7 @@ MonoBehaviour:
   characterSelectionCanvas: {fileID: 4956428390567298303}
   reticle: {fileID: 4956428390567298274}
   eventSystem: {fileID: 4956428390567298275}
+  XRRig: {fileID: 0}
 --- !u!222 &8113938351256100686
 CanvasRenderer:
   m_ObjectHideFlags: 0
