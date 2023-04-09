@@ -14,6 +14,10 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
 
+        GameObject light = transform.Find("XRCardboardRig/HeightOffset/Main Camera/Spot Light").gameObject;
+        Light spotlight = light.GetComponent<Light>();
+        spotlight.range = 20;
+        spotlight.spotAngle = 179;
         Renderer renderer = GetComponent<Renderer>();
         renderer.material = hunterRed;
 
