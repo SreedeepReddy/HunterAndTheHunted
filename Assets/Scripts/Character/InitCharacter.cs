@@ -17,6 +17,7 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineColor = Color.red;
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
+        this.GetComponent<Animator>().enabled = true;
 
         GameObject light = transform.Find("XRCardboardRig/HeightOffset/Main Camera/Spot Light").gameObject;
         Light spotlight = light.GetComponent<Light>();
