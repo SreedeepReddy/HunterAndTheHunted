@@ -1920,6 +1920,8 @@ struct SerializeStreamMethod_tE9A207ADBB74A63C939A741C47F75676E0A82BEF;
 struct ServerSettings_t41BE4338E7E76BFB4919D4039BAFC6799E242152;
 // UnityEngine.Shader
 struct Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692;
+// UnityEngine.SkinnedMeshRenderer
+struct SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E;
 // UnityEngine.UI.Slider
 struct Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F;
 // System.Net.Sockets.Socket
@@ -20024,10 +20026,16 @@ struct InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___HunterHips_5;
 	// UnityEngine.Material InitCharacter::huntedBlue
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___huntedBlue_6;
+	// UnityEngine.Material InitCharacter::hunterMat
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___hunterMat_7;
 	// Photon.Pun.PhotonView InitCharacter::photonView
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_7;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_8;
 	// UnityEngine.GameObject InitCharacter::spotLight
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spotLight_8;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spotLight_9;
+	// UnityEngine.SkinnedMeshRenderer InitCharacter::skinnedMeshRenderer
+	SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E* ___skinnedMeshRenderer_10;
+	// UnityEngine.Mesh InitCharacter::updatedMesh
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___updatedMesh_11;
 };
 
 // Photon.Pun.Demo.Cockpit.IntInputField
@@ -20695,10 +20703,12 @@ struct SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0  : public Mono
 // SetCharacter
 struct SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean SetCharacter::isHunter
-	bool ___isHunter_4;
-	// System.Boolean SetCharacter::isHunted
-	bool ___isHunted_5;
+	// System.Boolean SetCharacter::_isHunter
+	bool ____isHunter_4;
+	// Photon.Pun.PhotonView SetCharacter::photonView
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_5;
+	// System.Boolean SetCharacter::_isHunted
+	bool ____isHunted_6;
 };
 
 // SetFirstSelectedOnEnableVR
@@ -42318,15 +42328,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5848[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5849[5] = 
 {
 	static_cast<int32_t>(offsetof(HunterSpear_t380E9C150F40CF9E6662D58ADDC268F7838C2F90, ___myCamera_4)),static_cast<int32_t>(offsetof(HunterSpear_t380E9C150F40CF9E6662D58ADDC268F7838C2F90, ___hitInfo_5)),static_cast<int32_t>(offsetof(HunterSpear_t380E9C150F40CF9E6662D58ADDC268F7838C2F90, ___centerScreen_6)),static_cast<int32_t>(offsetof(HunterSpear_t380E9C150F40CF9E6662D58ADDC268F7838C2F90, ___killedPlayer_7)),static_cast<int32_t>(offsetof(HunterSpear_t380E9C150F40CF9E6662D58ADDC268F7838C2F90, ___killedNPC_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5850[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5850[8] = 
 {
-	static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___HunterModel_4)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___HunterHips_5)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___huntedBlue_6)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___photonView_7)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___spotLight_8)),};
+	static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___HunterModel_4)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___HunterHips_5)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___huntedBlue_6)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___hunterMat_7)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___photonView_8)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___spotLight_9)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___skinnedMeshRenderer_10)),static_cast<int32_t>(offsetof(InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37, ___updatedMesh_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5851[7] = 
 {
 	static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___moveSpeed_4)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___decisionTime_5)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___thisTransform_6)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___decisionTimeCount_7)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___moveDirections_8)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___currentMoveDirection_9)),static_cast<int32_t>(offsetof(NPCMovementScript_t22BF32EEE92A20D6850C58A10D3A6FF91963C81F, ___npcCntrl_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5853[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5853[3] = 
 {
-	static_cast<int32_t>(offsetof(SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D, ___isHunter_4)),static_cast<int32_t>(offsetof(SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D, ___isHunted_5)),};
+	static_cast<int32_t>(offsetof(SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D, ____isHunter_4)),static_cast<int32_t>(offsetof(SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D, ___photonView_5)),static_cast<int32_t>(offsetof(SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D, ____isHunted_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5854[3] = 
 {
 	static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___vrGroup_4)),static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___firstSelected_5)),static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___eventSystem_6)),};

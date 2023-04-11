@@ -1406,8 +1406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c991f2fab5af243b6e06297619ec83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHunter: 0
-  isHunted: 0
+  _isHunter: 0
+  _isHunted: 0
 --- !u!114 &8939372577240354830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,8 +1423,10 @@ MonoBehaviour:
   HunterModel: {fileID: 7485495067229530975}
   HunterHips: {fileID: 7485495068466166855}
   huntedBlue: {fileID: 2100000, guid: 7198d995e0cd3ac4caa22524c708f65e, type: 2}
+  hunterMat: {fileID: 2100000, guid: 6b9e520ad376d3049a3a3772f9ffd34c, type: 2}
   photonView: {fileID: 4176352660792890470}
   spotLight: {fileID: 7897943980354556732}
+  updatedMesh: {fileID: -371481341812892972, guid: 78b04dfc490c2004a8b4162dbcd66c8b, type: 3}
 --- !u!114 &1564117233957465055
 MonoBehaviour:
   m_ObjectHideFlags: 0
