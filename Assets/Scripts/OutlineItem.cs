@@ -10,17 +10,33 @@ public class OutlineItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     // Start is called before the first frame update
     void Start()
     {
-        outline = GetComponent<Outline>();
+        StartCoroutine(CheckOutlineExists());
+    }
+
+    IEnumerator CheckOutlineExists()
+    {
+        while (outline == null)
+        {
+            outline = GetComponent<Outline>();
+            yield return null;
+        }
+
         outline.OutlineMode = Outline.Mode.OutlineVisible;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        outline.GetComponent<Outline>().enabled = true;
+        if (outline != null)
+        {
+            outline.enabled = true;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        outline.GetComponent<Outline>().enabled = false;
+        if (outline != null)
+        {
+            outline.enabled = false;
+        }
     }
 }
