@@ -5868,7 +5868,6 @@ MonoBehaviour:
   characterSelectionCanvas: {fileID: 5712636696616727103}
   reticle: {fileID: 5712636696616727074}
   eventSystem: {fileID: 5712636696616727075}
-  XRRig: {fileID: 0}
 --- !u!222 &8869248356381518222
 CanvasRenderer:
   m_ObjectHideFlags: 0
