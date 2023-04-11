@@ -232,45 +232,27 @@ extern void GlyphValueRecord_GetHashCode_m9A2BFC7780FBD61A4B7E0091F8FE87DA15081B
 extern void GlyphValueRecord_Equals_m5DC74E9C597D8F27754444C057F819ECB24CB8B6 (void);
 // 0x0000006F System.Boolean UnityEngine.TextCore.LowLevel.GlyphValueRecord::Equals(UnityEngine.TextCore.LowLevel.GlyphValueRecord)
 extern void GlyphValueRecord_Equals_mB5F45CBE745D1C5BAF7944989DF4239FDC78D972 (void);
-// 0x00000070 System.Boolean UnityEngine.TextCore.LowLevel.GlyphValueRecord::op_Equality(UnityEngine.TextCore.LowLevel.GlyphValueRecord,UnityEngine.TextCore.LowLevel.GlyphValueRecord)
-extern void GlyphValueRecord_op_Equality_m2AFC5B719C0208115B6990D2808776B3A1C90A59 (void);
-// 0x00000071 System.UInt32 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::get_glyphIndex()
+// 0x00000070 System.UInt32 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::get_glyphIndex()
 extern void GlyphAdjustmentRecord_get_glyphIndex_mB1C51945CA4FF019A74BC98C01C8883A396CBFA9 (void);
-// 0x00000072 UnityEngine.TextCore.LowLevel.GlyphValueRecord UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::get_glyphValueRecord()
+// 0x00000071 UnityEngine.TextCore.LowLevel.GlyphValueRecord UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::get_glyphValueRecord()
 extern void GlyphAdjustmentRecord_get_glyphValueRecord_m83866DCE07A22F903D4BA417476E64114625BDD7 (void);
-// 0x00000073 System.Int32 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::GetHashCode()
+// 0x00000072 System.Int32 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::GetHashCode()
 extern void GlyphAdjustmentRecord_GetHashCode_m8E0D84D4458A732085FCCA04AAE0A0B16CB3226C (void);
-// 0x00000074 System.Boolean UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::Equals(System.Object)
+// 0x00000073 System.Boolean UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::Equals(System.Object)
 extern void GlyphAdjustmentRecord_Equals_mEF9EBAA5A7ED2B136EA25A2AD26353406884F47D (void);
-// 0x00000075 System.Boolean UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::Equals(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
+// 0x00000074 System.Boolean UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::Equals(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
 extern void GlyphAdjustmentRecord_Equals_m2F5908F3B2BB2F6596E40E6A74E5F2120BCDA535 (void);
-// 0x00000076 System.Boolean UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord::op_Equality(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord,UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphAdjustmentRecord_op_Equality_mA86E910E24C5AD36005A9694FC635DA4A19BCB61 (void);
-// 0x00000077 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_firstAdjustmentRecord()
+// 0x00000075 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_firstAdjustmentRecord()
 extern void GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m867469548F17B298F893B78EE2F93D34E4A6C39C (void);
-// 0x00000078 System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_firstAdjustmentRecord(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_mA19E5BFDFB5B5EF6B82BE195BC407390E3754296 (void);
-// 0x00000079 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_secondAdjustmentRecord()
+// 0x00000076 UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_secondAdjustmentRecord()
 extern void GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_mFDFECB1F7A38E22BD2388FFE9C71E732F6B44D91 (void);
-// 0x0000007A System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_secondAdjustmentRecord(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_m5C90F3C44ADD213E181BDB955AB214B6F56B2FBF (void);
-// 0x0000007B UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_featureLookupFlags()
-extern void GlyphPairAdjustmentRecord_get_featureLookupFlags_m08DA76766FDE949068B881DBEA29955C9C43E8A9 (void);
-// 0x0000007C System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_featureLookupFlags(UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags)
-extern void GlyphPairAdjustmentRecord_set_featureLookupFlags_m4900CDB13F697D5CD7012383E71910AEAD170359 (void);
-// 0x0000007D System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::.ctor(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord,UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord__ctor_m2B1BCCA950399944824CFB79D74C39A7A4F87A6A (void);
-// 0x0000007E System.Int32 UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::GetHashCode()
+// 0x00000077 System.Int32 UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::GetHashCode()
 extern void GlyphPairAdjustmentRecord_GetHashCode_mC253F24FFD3BCE5EEB44CA6CDE1BE19336E0A5F5 (void);
-// 0x0000007F System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::Equals(System.Object)
+// 0x00000078 System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::Equals(System.Object)
 extern void GlyphPairAdjustmentRecord_Equals_m0F49F5D76C114BB660B7619A93247591AE323CFD (void);
-// 0x00000080 System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::Equals(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord)
+// 0x00000079 System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::Equals(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord)
 extern void GlyphPairAdjustmentRecord_Equals_m2DADFD15A4DFF37570EA51D9EAEBA30DF0007689 (void);
-// 0x00000081 System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::op_Equality(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord,UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_op_Equality_m0F93964041166C7D04A88FEA17D6E52102AC14AF (void);
-// 0x00000082 System.Boolean UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::op_Inequality(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord,UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_op_Inequality_mE925301B5EAA3E6E3FBD08527AA9386CFF2B591D (void);
-static Il2CppMethodPointer s_methodPointers[130] = 
+static Il2CppMethodPointer s_methodPointers[121] = 
 {
 	FaceInfo_get_faceIndex_m3C9FB6429035CD34ACD201FB5951AF06E9C2A641,
 	FaceInfo_get_familyName_m62DAF5DE45EA9F3B300B927603D101D350D27241,
@@ -383,25 +365,16 @@ static Il2CppMethodPointer s_methodPointers[130] =
 	GlyphValueRecord_GetHashCode_m9A2BFC7780FBD61A4B7E0091F8FE87DA15081B60,
 	GlyphValueRecord_Equals_m5DC74E9C597D8F27754444C057F819ECB24CB8B6,
 	GlyphValueRecord_Equals_mB5F45CBE745D1C5BAF7944989DF4239FDC78D972,
-	GlyphValueRecord_op_Equality_m2AFC5B719C0208115B6990D2808776B3A1C90A59,
 	GlyphAdjustmentRecord_get_glyphIndex_mB1C51945CA4FF019A74BC98C01C8883A396CBFA9,
 	GlyphAdjustmentRecord_get_glyphValueRecord_m83866DCE07A22F903D4BA417476E64114625BDD7,
 	GlyphAdjustmentRecord_GetHashCode_m8E0D84D4458A732085FCCA04AAE0A0B16CB3226C,
 	GlyphAdjustmentRecord_Equals_mEF9EBAA5A7ED2B136EA25A2AD26353406884F47D,
 	GlyphAdjustmentRecord_Equals_m2F5908F3B2BB2F6596E40E6A74E5F2120BCDA535,
-	GlyphAdjustmentRecord_op_Equality_mA86E910E24C5AD36005A9694FC635DA4A19BCB61,
 	GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m867469548F17B298F893B78EE2F93D34E4A6C39C,
-	GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_mA19E5BFDFB5B5EF6B82BE195BC407390E3754296,
 	GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_mFDFECB1F7A38E22BD2388FFE9C71E732F6B44D91,
-	GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_m5C90F3C44ADD213E181BDB955AB214B6F56B2FBF,
-	GlyphPairAdjustmentRecord_get_featureLookupFlags_m08DA76766FDE949068B881DBEA29955C9C43E8A9,
-	GlyphPairAdjustmentRecord_set_featureLookupFlags_m4900CDB13F697D5CD7012383E71910AEAD170359,
-	GlyphPairAdjustmentRecord__ctor_m2B1BCCA950399944824CFB79D74C39A7A4F87A6A,
 	GlyphPairAdjustmentRecord_GetHashCode_mC253F24FFD3BCE5EEB44CA6CDE1BE19336E0A5F5,
 	GlyphPairAdjustmentRecord_Equals_m0F49F5D76C114BB660B7619A93247591AE323CFD,
 	GlyphPairAdjustmentRecord_Equals_m2DADFD15A4DFF37570EA51D9EAEBA30DF0007689,
-	GlyphPairAdjustmentRecord_op_Equality_m0F93964041166C7D04A88FEA17D6E52102AC14AF,
-	GlyphPairAdjustmentRecord_op_Inequality_mE925301B5EAA3E6E3FBD08527AA9386CFF2B591D,
 };
 extern void FaceInfo_get_faceIndex_m3C9FB6429035CD34ACD201FB5951AF06E9C2A641_AdjustorThunk (void);
 extern void FaceInfo_get_familyName_m62DAF5DE45EA9F3B300B927603D101D350D27241_AdjustorThunk (void);
@@ -471,16 +444,11 @@ extern void GlyphAdjustmentRecord_GetHashCode_m8E0D84D4458A732085FCCA04AAE0A0B16
 extern void GlyphAdjustmentRecord_Equals_mEF9EBAA5A7ED2B136EA25A2AD26353406884F47D_AdjustorThunk (void);
 extern void GlyphAdjustmentRecord_Equals_m2F5908F3B2BB2F6596E40E6A74E5F2120BCDA535_AdjustorThunk (void);
 extern void GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m867469548F17B298F893B78EE2F93D34E4A6C39C_AdjustorThunk (void);
-extern void GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_mA19E5BFDFB5B5EF6B82BE195BC407390E3754296_AdjustorThunk (void);
 extern void GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_mFDFECB1F7A38E22BD2388FFE9C71E732F6B44D91_AdjustorThunk (void);
-extern void GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_m5C90F3C44ADD213E181BDB955AB214B6F56B2FBF_AdjustorThunk (void);
-extern void GlyphPairAdjustmentRecord_get_featureLookupFlags_m08DA76766FDE949068B881DBEA29955C9C43E8A9_AdjustorThunk (void);
-extern void GlyphPairAdjustmentRecord_set_featureLookupFlags_m4900CDB13F697D5CD7012383E71910AEAD170359_AdjustorThunk (void);
-extern void GlyphPairAdjustmentRecord__ctor_m2B1BCCA950399944824CFB79D74C39A7A4F87A6A_AdjustorThunk (void);
 extern void GlyphPairAdjustmentRecord_GetHashCode_mC253F24FFD3BCE5EEB44CA6CDE1BE19336E0A5F5_AdjustorThunk (void);
 extern void GlyphPairAdjustmentRecord_Equals_m0F49F5D76C114BB660B7619A93247591AE323CFD_AdjustorThunk (void);
 extern void GlyphPairAdjustmentRecord_Equals_m2DADFD15A4DFF37570EA51D9EAEBA30DF0007689_AdjustorThunk (void);
-static Il2CppTokenAdjustorThunkPair s_adjustorThunks[77] = 
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[72] = 
 {
 	{ 0x06000001, FaceInfo_get_faceIndex_m3C9FB6429035CD34ACD201FB5951AF06E9C2A641_AdjustorThunk },
 	{ 0x06000002, FaceInfo_get_familyName_m62DAF5DE45EA9F3B300B927603D101D350D27241_AdjustorThunk },
@@ -544,154 +512,140 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[77] =
 	{ 0x0600006D, GlyphValueRecord_GetHashCode_m9A2BFC7780FBD61A4B7E0091F8FE87DA15081B60_AdjustorThunk },
 	{ 0x0600006E, GlyphValueRecord_Equals_m5DC74E9C597D8F27754444C057F819ECB24CB8B6_AdjustorThunk },
 	{ 0x0600006F, GlyphValueRecord_Equals_mB5F45CBE745D1C5BAF7944989DF4239FDC78D972_AdjustorThunk },
-	{ 0x06000071, GlyphAdjustmentRecord_get_glyphIndex_mB1C51945CA4FF019A74BC98C01C8883A396CBFA9_AdjustorThunk },
-	{ 0x06000072, GlyphAdjustmentRecord_get_glyphValueRecord_m83866DCE07A22F903D4BA417476E64114625BDD7_AdjustorThunk },
-	{ 0x06000073, GlyphAdjustmentRecord_GetHashCode_m8E0D84D4458A732085FCCA04AAE0A0B16CB3226C_AdjustorThunk },
-	{ 0x06000074, GlyphAdjustmentRecord_Equals_mEF9EBAA5A7ED2B136EA25A2AD26353406884F47D_AdjustorThunk },
-	{ 0x06000075, GlyphAdjustmentRecord_Equals_m2F5908F3B2BB2F6596E40E6A74E5F2120BCDA535_AdjustorThunk },
-	{ 0x06000077, GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m867469548F17B298F893B78EE2F93D34E4A6C39C_AdjustorThunk },
-	{ 0x06000078, GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_mA19E5BFDFB5B5EF6B82BE195BC407390E3754296_AdjustorThunk },
-	{ 0x06000079, GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_mFDFECB1F7A38E22BD2388FFE9C71E732F6B44D91_AdjustorThunk },
-	{ 0x0600007A, GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_m5C90F3C44ADD213E181BDB955AB214B6F56B2FBF_AdjustorThunk },
-	{ 0x0600007B, GlyphPairAdjustmentRecord_get_featureLookupFlags_m08DA76766FDE949068B881DBEA29955C9C43E8A9_AdjustorThunk },
-	{ 0x0600007C, GlyphPairAdjustmentRecord_set_featureLookupFlags_m4900CDB13F697D5CD7012383E71910AEAD170359_AdjustorThunk },
-	{ 0x0600007D, GlyphPairAdjustmentRecord__ctor_m2B1BCCA950399944824CFB79D74C39A7A4F87A6A_AdjustorThunk },
-	{ 0x0600007E, GlyphPairAdjustmentRecord_GetHashCode_mC253F24FFD3BCE5EEB44CA6CDE1BE19336E0A5F5_AdjustorThunk },
-	{ 0x0600007F, GlyphPairAdjustmentRecord_Equals_m0F49F5D76C114BB660B7619A93247591AE323CFD_AdjustorThunk },
-	{ 0x06000080, GlyphPairAdjustmentRecord_Equals_m2DADFD15A4DFF37570EA51D9EAEBA30DF0007689_AdjustorThunk },
+	{ 0x06000070, GlyphAdjustmentRecord_get_glyphIndex_mB1C51945CA4FF019A74BC98C01C8883A396CBFA9_AdjustorThunk },
+	{ 0x06000071, GlyphAdjustmentRecord_get_glyphValueRecord_m83866DCE07A22F903D4BA417476E64114625BDD7_AdjustorThunk },
+	{ 0x06000072, GlyphAdjustmentRecord_GetHashCode_m8E0D84D4458A732085FCCA04AAE0A0B16CB3226C_AdjustorThunk },
+	{ 0x06000073, GlyphAdjustmentRecord_Equals_mEF9EBAA5A7ED2B136EA25A2AD26353406884F47D_AdjustorThunk },
+	{ 0x06000074, GlyphAdjustmentRecord_Equals_m2F5908F3B2BB2F6596E40E6A74E5F2120BCDA535_AdjustorThunk },
+	{ 0x06000075, GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m867469548F17B298F893B78EE2F93D34E4A6C39C_AdjustorThunk },
+	{ 0x06000076, GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_mFDFECB1F7A38E22BD2388FFE9C71E732F6B44D91_AdjustorThunk },
+	{ 0x06000077, GlyphPairAdjustmentRecord_GetHashCode_mC253F24FFD3BCE5EEB44CA6CDE1BE19336E0A5F5_AdjustorThunk },
+	{ 0x06000078, GlyphPairAdjustmentRecord_Equals_m0F49F5D76C114BB660B7619A93247591AE323CFD_AdjustorThunk },
+	{ 0x06000079, GlyphPairAdjustmentRecord_Equals_m2DADFD15A4DFF37570EA51D9EAEBA30DF0007689_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[130] = 
+static const int32_t s_InvokerIndices[121] = 
 {
-	4064,
-	4086,
-	3393,
-	4086,
-	3393,
-	4064,
-	3374,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	4123,
-	3426,
-	3426,
-	4123,
-	3426,
-	4064,
-	4064,
-	4064,
-	4064,
-	6353,
-	670,
-	4064,
-	2448,
-	2414,
-	6394,
-	4123,
-	4123,
-	4123,
-	4123,
-	4123,
-	386,
-	4064,
-	2448,
-	2412,
-	4168,
-	3466,
-	4052,
-	3363,
-	4054,
-	3365,
-	4123,
-	3426,
-	4064,
-	3374,
-	4181,
-	3362,
-	388,
-	6357,
-	6357,
-	5092,
-	5092,
-	5593,
-	5593,
-	5092,
-	5092,
-	5097,
-	5097,
-	5024,
-	5024,
-	6351,
-	6023,
-	6213,
-	5041,
-	5041,
-	5041,
-	5041,
-	6246,
-	4296,
-	4266,
-	4293,
-	4261,
-	6102,
-	5644,
-	5591,
-	6035,
+	4543,
+	4567,
+	3805,
+	4567,
+	3805,
+	4543,
+	3784,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	4607,
+	3840,
+	3840,
+	4607,
+	3840,
+	4543,
+	4543,
+	4543,
+	4543,
+	6886,
+	723,
+	4543,
+	2775,
+	2737,
+	6927,
+	4607,
+	4607,
+	4607,
+	4607,
+	4607,
+	416,
+	4543,
+	2775,
+	2735,
+	4652,
+	3879,
+	4528,
+	3770,
+	4530,
+	3772,
+	4607,
+	3840,
+	4543,
+	3784,
+	4665,
+	3769,
+	418,
+	6890,
+	6890,
+	5620,
+	5620,
+	6110,
+	6110,
+	5620,
+	5620,
+	5625,
+	5625,
+	5550,
+	5550,
+	6884,
+	6552,
+	6753,
+	5568,
+	5568,
+	5568,
+	5568,
+	6787,
+	4787,
+	4756,
+	4784,
+	4751,
+	6639,
+	6163,
+	6108,
+	6564,
 	0,
 	0,
-	6254,
-	6394,
-	5084,
-	4123,
-	4123,
-	4123,
-	4123,
-	5563,
-	4064,
-	2448,
-	2415,
-	5460,
-	4168,
-	4055,
-	4064,
-	2448,
-	2410,
-	5458,
-	4050,
-	3361,
-	4050,
-	3361,
-	4064,
-	3374,
-	1598,
-	4064,
-	2448,
-	2413,
-	5459,
-	5459,
+	6796,
+	6927,
+	5612,
+	4607,
+	4607,
+	4607,
+	4607,
+	6080,
+	4543,
+	2775,
+	2738,
+	4652,
+	4531,
+	4543,
+	2775,
+	2733,
+	4526,
+	4526,
+	4543,
+	2775,
+	2736,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[2] = 
 {
@@ -719,9 +673,9 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TextCoreFontEngineModule
 const Il2CppCodeGenModule g_UnityEngine_TextCoreFontEngineModule_CodeGenModule = 
 {
 	"UnityEngine.TextCoreFontEngineModule.dll",
-	130,
+	121,
 	s_methodPointers,
-	77,
+	72,
 	s_adjustorThunks,
 	s_InvokerIndices,
 	0,

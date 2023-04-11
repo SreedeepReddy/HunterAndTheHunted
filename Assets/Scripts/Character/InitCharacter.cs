@@ -15,6 +15,7 @@ public class InitCharacter : MonoBehaviour
     private void InitHunter()
     {
         this.AddComponent<Outline>();
+        this.GetComponent<HunterSpear>().enabled = true;
         this.GetComponent<Outline>().outlineColor = Color.red;
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
@@ -27,13 +28,14 @@ public class InitCharacter : MonoBehaviour
         HunterModel.SetActive(true);
         HunterHips.SetActive(true);
         Destroy(GetComponent<MeshFilter>().mesh);
-
+        GameObject.Find("Session").GetComponent<SessionVariables>().HunterCount += 1;
 
         this.GetComponent<CharacterMovement>().speed = 1500;
 
         spotLight.AddComponent<RenderLight>();
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, true);
+        this.gameObject.tag = "Hunter";
         this.GetComponent<InitCharacter>().enabled = false;
     }
 
@@ -43,11 +45,13 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineColor = Color.blue;
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
+        GameObject.Find("Session").GetComponent<SessionVariables>().HuntedCount += 1;
 
         Renderer renderer = GetComponent<Renderer>();
         renderer.material = huntedBlue;
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, false);
+        this.gameObject.tag = "Hunted";
         this.GetComponent<InitCharacter>().enabled = false;
     }
 
