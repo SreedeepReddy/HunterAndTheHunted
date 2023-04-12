@@ -1174,7 +1174,6 @@ GameObject:
   - component: {fileID: 4176352660792890470}
   - component: {fileID: 2323541317142464942}
   - component: {fileID: 3328612733884456763}
-  - component: {fileID: 5192931981409059536}
   - component: {fileID: 6742984522012086502}
   - component: {fileID: 8743625077441749900}
   - component: {fileID: 3860316233904411591}
@@ -1188,6 +1187,7 @@ GameObject:
   - component: {fileID: 7293145946329522376}
   - component: {fileID: 2316571741566765610}
   - component: {fileID: 4814682366929903550}
+  - component: {fileID: 2133801987994979751}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1236,8 +1236,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 5192931981409059536}
   - {fileID: 6742984522012086502}
+  - {fileID: 2133801987994979751}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1276,39 +1276,6 @@ MonoBehaviour:
   speed: 10
   charCntrl: {fileID: 2323541317142464942}
   view: {fileID: 4176352660792890470}
---- !u!114 &5192931981409059536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2533581858033603824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 2
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 1
-    ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-  m_RotationModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 1
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
-  m_ScaleModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
 --- !u!114 &6742984522012086502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,7 +1355,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2533581858033603824}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -1608,6 +1575,22 @@ MonoBehaviour:
   myCamera: {fileID: 2886078362215012867}
   killedPlayer: {fileID: 6115639688849561585}
   killedNPC: {fileID: 5968913747443148174}
+--- !u!114 &2133801987994979751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533581858033603824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &2533581858033603826
 GameObject:
   m_ObjectHideFlags: 0
