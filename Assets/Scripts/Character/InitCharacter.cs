@@ -9,11 +9,8 @@ public class InitCharacter : MonoBehaviour
     public GameObject HunterModel;
     public GameObject HunterHips;
     public Material huntedBlue;
-    public Material hunterMat;
     public PhotonView photonView;
     public GameObject spotLight;
-    private SkinnedMeshRenderer skinnedMeshRenderer;
-    public Mesh updatedMesh;
 
     private void InitHunter()
     {
@@ -23,7 +20,6 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
         this.GetComponent<Animator>().enabled = true;
-        skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
 
         GameObject light = transform.Find("XRCardboardRig/HeightOffset/Main Camera/Spot Light").gameObject;
         Light spotlight = light.GetComponent<Light>();
@@ -65,7 +61,7 @@ public class InitCharacter : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         if (isHunter)
         {
-            renderer.material = hunterMat;
+            //renderer.material = hunterRed;
         }
         else
         {
@@ -85,14 +81,5 @@ public class InitCharacter : MonoBehaviour
         {
             InitHunted();
         }
-
-        skinnedMeshRenderer.sharedMesh = updatedMesh;
-        photonView.RPC("SyncMesh", RpcTarget.OthersBuffered, updatedMesh);
-    }
-
-    [PunRPC]
-    void SyncMesh(Mesh mesh)
-    {
-        skinnedMeshRenderer.sharedMesh = mesh;
     }
 }

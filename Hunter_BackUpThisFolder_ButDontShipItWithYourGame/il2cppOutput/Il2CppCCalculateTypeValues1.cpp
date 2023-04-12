@@ -682,8 +682,6 @@ struct ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E;
 struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 // Photon.Pun.ServerSettings
 struct ServerSettings_t41BE4338E7E76BFB4919D4039BAFC6799E242152;
-// UnityEngine.SkinnedMeshRenderer
-struct SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E;
 // UnityEngine.UI.Slider
 struct Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F;
 // System.Net.Sockets.Socket
@@ -9076,16 +9074,10 @@ struct InitCharacter_t2A390AB7EEAD4EEDDE8D36D8CEDE233C5CDBEC37  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___HunterHips_5;
 	// UnityEngine.Material InitCharacter::huntedBlue
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___huntedBlue_6;
-	// UnityEngine.Material InitCharacter::hunterMat
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___hunterMat_7;
 	// Photon.Pun.PhotonView InitCharacter::photonView
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_8;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_7;
 	// UnityEngine.GameObject InitCharacter::spotLight
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spotLight_9;
-	// UnityEngine.SkinnedMeshRenderer InitCharacter::skinnedMeshRenderer
-	SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E* ___skinnedMeshRenderer_10;
-	// UnityEngine.Mesh InitCharacter::updatedMesh
-	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___updatedMesh_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spotLight_8;
 };
 
 // Photon.Pun.Demo.Cockpit.IntInputField
@@ -9759,12 +9751,10 @@ struct SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0  : public Mono
 // SetCharacter
 struct SetCharacter_t3B3263E00B958C06669FEAA6733E1AD43AA3A97D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean SetCharacter::_isHunter
-	bool ____isHunter_4;
-	// Photon.Pun.PhotonView SetCharacter::photonView
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_5;
-	// System.Boolean SetCharacter::_isHunted
-	bool ____isHunted_6;
+	// System.Boolean SetCharacter::isHunter
+	bool ___isHunter_4;
+	// System.Boolean SetCharacter::isHunted
+	bool ___isHunted_5;
 };
 
 // SetFirstSelectedOnEnableVR
