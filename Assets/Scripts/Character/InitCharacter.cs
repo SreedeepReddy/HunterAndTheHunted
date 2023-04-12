@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class InitCharacter : MonoBehaviour
 {
-    public GameObject HunterModel;
-    public GameObject HunterHips;
+    public Material hunterRed;
     public Material huntedBlue;
     public PhotonView photonView;
     public GameObject spotLight;
@@ -22,10 +21,8 @@ public class InitCharacter : MonoBehaviour
         Light spotlight = light.GetComponent<Light>();
         spotlight.range = 20;
         spotlight.spotAngle = 179;
-        HunterModel.SetActive(true);
-        HunterHips.SetActive(true);
-        Destroy(GetComponent<MeshFilter>().mesh);
-
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material = hunterRed;
 
         this.GetComponent<CharacterMovement>().speed = 1500;
 
@@ -53,7 +50,7 @@ public class InitCharacter : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         if (isHunter)
         {
-            //renderer.material = hunterRed;
+            renderer.material = hunterRed;
         }
         else
         {
