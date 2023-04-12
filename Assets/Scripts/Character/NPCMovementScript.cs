@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NPCMovementScript : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Vector2 decisionTime = new Vector2(0, 2);
     private Transform thisTransform;
     private float decisionTimeCount;
