@@ -13,7 +13,7 @@ public class SessionVariables : MonoBehaviour
     public int HuntedCount = 0;
     public int HunterCount = 0;
     public int SpearCount = 3;
-    private string gameEnd = "Game Over!";
+    public string gameEnd = "Game Over!";
 
     private void PauseGame()
     {
@@ -44,19 +44,19 @@ public class SessionVariables : MonoBehaviour
 
             foreach (GameObject hunted in hunteds)
             {
-                hunted.GetComponent<CharacterMovement>().speed = 1000;
+                hunted.GetComponent<CharacterMovement>().speed = 200;
             }
 
             GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
 
             foreach (GameObject npc in npcs)
             {
-                npc.GetComponent<NPCMovementScript>().moveSpeed = 1000;
+                npc.GetComponent<NPCMovementScript>().moveSpeed = 200;
             }
 
             GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
 
-            hunter.GetComponent<CharacterMovement>().speed = 1500;
+            hunter.GetComponent<CharacterMovement>().speed = 300;
             startGameInit = false;
         }
         

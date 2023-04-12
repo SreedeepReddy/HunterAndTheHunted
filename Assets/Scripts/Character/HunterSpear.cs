@@ -41,7 +41,7 @@ public class HunterSpear : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("js5"))
+        if (Input.GetButtonDown("js10"))
         {
             Ray ray = myCamera.ScreenPointToRay(centerScreen);
 

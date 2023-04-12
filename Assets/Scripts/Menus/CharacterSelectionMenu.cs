@@ -25,7 +25,7 @@ public class CharacterSelectionMenu : MonoBehaviour
 
         eventSystem.GetComponent<StandaloneInputModule>().enabled = false;
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = true;
-        character.GetComponent<CharacterMovement>().speed = 1500;
+        character.GetComponent<CharacterMovement>().speed = 300;
         reticle.SetActive(true);
 
         characterSelectionCanvas.SetActive(false);      
@@ -37,7 +37,7 @@ public class CharacterSelectionMenu : MonoBehaviour
 
         eventSystem.GetComponent<StandaloneInputModule>().enabled = false;
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = true;
-        character.GetComponent<CharacterMovement>().speed = 1000;
+        character.GetComponent<CharacterMovement>().speed = 200;
         reticle.SetActive(true);
 
         characterSelectionCanvas.SetActive(false);

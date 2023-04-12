@@ -17,11 +17,11 @@ public class OpenSettings : MonoBehaviour
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = true;
         if (character.GetComponent<SetCharacter>().isHunter)
         {
-            character.GetComponent<CharacterMovement>().speed = 1500;
+            character.GetComponent<CharacterMovement>().speed = 300;
         }
         else 
         {
-            character.GetComponent<CharacterMovement>().speed = 1000;
+            character.GetComponent<CharacterMovement>().speed = 200;
         }
         settingsCanvas.SetActive(false);
         reticle.SetActive(true);

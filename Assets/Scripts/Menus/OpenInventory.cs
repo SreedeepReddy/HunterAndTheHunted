@@ -16,7 +16,15 @@ public class OpenInventory : MonoBehaviour
     {
         eventSystem.GetComponent<StandaloneInputModule>().enabled = false;
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = true;
-        character.GetComponent<CharacterMovement>().speed = 1000;
+        if (character.GetComponent<SetCharacter>().isHunter)
+        {
+            character.GetComponent<CharacterMovement>().speed = 300;
+        }
+        else 
+        {
+            character.GetComponent<CharacterMovement>().speed = 200;
+        }
+        
         inventoryCanvas.SetActive(false);
         reticle.SetActive(true);
     }

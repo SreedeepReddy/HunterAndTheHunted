@@ -34,7 +34,7 @@ public class InitCharacter : MonoBehaviour
         Destroy(GetComponent<MeshFilter>().mesh);
         GameObject.Find("Session").GetComponent<SessionVariables>().HunterCount += 1;
 
-        this.GetComponent<CharacterMovement>().speed = 1500;
+        this.GetComponent<CharacterMovement>().speed = 300;
 
         spotLight.AddComponent<RenderLight>();
 
@@ -50,6 +50,8 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
         GameObject.Find("Session").GetComponent<SessionVariables>().HuntedCount += 1;
+
+        this.GetComponent<CharacterMovement>().speed = 200;
 
         Renderer renderer = GetComponent<Renderer>();
         renderer.material = huntedBlue;
