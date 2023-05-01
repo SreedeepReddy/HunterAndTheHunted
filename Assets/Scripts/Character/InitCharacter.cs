@@ -11,7 +11,8 @@ public class InitCharacter : MonoBehaviour
     public Material huntedBlue;
     public Material hunterMat;
     public PhotonView photonView;
-    public GameObject spotLight;
+    public GameObject SpotLight;
+    public GameObject SMR_ref;
     private SkinnedMeshRenderer skinnedMeshRenderer;
     public Mesh updatedMesh;
 
@@ -22,11 +23,10 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineColor = Color.red;
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
-        //this.GetComponent<Animator>().enabled = true;
-        skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        this.GetComponent<Animator>().enabled = true;
+        skinnedMeshRenderer = SMR_ref.GetComponent<SkinnedMeshRenderer>();
 
-        GameObject light = transform.Find("XRCardboardRig/HeightOffset/Main Camera/Spot Light").gameObject;
-        Light spotlight = light.GetComponent<Light>();
+        Light spotlight = SpotLight.GetComponent<Light>();
         spotlight.range = 20;
         spotlight.spotAngle = 179;
         HunterModel.SetActive(true);
@@ -36,7 +36,7 @@ public class InitCharacter : MonoBehaviour
 
         this.GetComponent<CharacterMovement>().speed = 300;
 
-        spotLight.AddComponent<RenderLight>();
+        spotlight.AddComponent<RenderLight>();
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, true);
         this.gameObject.tag = "Hunter";

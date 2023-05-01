@@ -26380,7 +26380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094c559e8e6f90c4f92440d1e19d2e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2533581858033603824, guid: c898458c87a267146a07471f29868bd8, type: 3}
+  player: {fileID: 403180850138919403, guid: 6461c953eda847a4e8e2ad0cdbc0399e, type: 3}
   minX: -24
   maxX: 9
   minY: 1
