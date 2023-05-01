@@ -43,7 +43,7 @@ public class HunterSpear : MonoBehaviour
     {
         if (Input.GetButtonDown("js10"))
         {
-            Ray ray = myCamera.ScreenPointToRay(centerScreen);
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
             if (Physics.Raycast(ray, out hitInfo) && hitInfo.collider.CompareTag("NPC"))
             {

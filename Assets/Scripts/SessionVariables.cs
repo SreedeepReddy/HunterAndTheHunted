@@ -117,7 +117,7 @@ public class SessionVariables : MonoBehaviour
             PauseGame();
         }
 
-        if (HuntedCount >= 1 && HunterCount == 1) 
+        if (HuntedCount >= 2 && HunterCount == 1) 
         {
             gameStarted = true;
             StartGame();
