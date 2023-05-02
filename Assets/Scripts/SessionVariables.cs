@@ -9,12 +9,14 @@ public class SessionVariables : MonoBehaviour
     public bool gameStarted = false;
     private bool startGameInit = true;
     private bool endGameInit = true;
+    public int OrbCollected = 0;
     public int NPCCount = 5;
     //public int PlayerCount = 0;
     public int HuntedCount = 0;
     public int HunterCount = 0;
     public int SpearCount = 3;
     public string gameEnd = "Game Over!";
+    public float sessionDuration = 300f;
 
     private void PauseGame()
     {
@@ -113,9 +115,23 @@ public class SessionVariables : MonoBehaviour
 
     private void Update()
     {
-        if (!gameStarted) 
+        if (!gameStarted)
         {
             PauseGame();
+        }
+        else 
+        {
+            if (sessionDuration > 0f)
+            {
+                sessionDuration -= Time.deltaTime;
+                // Update UI
+            }
+            else
+            {
+                gameEnd = "Hunted Wins!";
+                Debug.Log("Hunted Wins!");
+                OpenEndScreen();
+            }
         }
 
         if (HuntedCount >= 2 && HunterCount == 1) 
@@ -141,6 +157,13 @@ public class SessionVariables : MonoBehaviour
         if (HunterCount == 1) 
         {
             DisableHunterSelection();
+        }
+
+        if (OrbCollected == 5) 
+        {
+            gameEnd = "Hunted Wins!";
+            Debug.Log("Hunted Wins!");
+            OpenEndScreen();
         }
     }
 

@@ -20,6 +20,7 @@ public class syncGamestate : MonoBehaviour, IPunObservable
             stream.SendNext(session.GetComponent<SessionVariables>().HuntedCount);
             stream.SendNext(session.GetComponent<SessionVariables>().HunterCount);
             stream.SendNext(session.GetComponent<SessionVariables>().SpearCount);
+            stream.SendNext(session.GetComponent<SessionVariables>().OrbCollected);
         }
         else
         {
@@ -27,6 +28,7 @@ public class syncGamestate : MonoBehaviour, IPunObservable
             session.GetComponent<SessionVariables>().HuntedCount = (int)stream.ReceiveNext();
             session.GetComponent<SessionVariables>().HunterCount = (int)stream.ReceiveNext();
             session.GetComponent<SessionVariables>().SpearCount = (int)stream.ReceiveNext();
+            session.GetComponent<SessionVariables>().OrbCollected = (int)stream.ReceiveNext();
         }
     }
 }
