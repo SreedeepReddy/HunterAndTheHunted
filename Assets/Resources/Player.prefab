@@ -838,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403180848828798950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6614481, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6064,7 +6064,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403180850606208039}
-  m_LocalRotation: {x: -0.036478043, y: 0.36795133, z: 0.013294509, w: 0.9290341}
+  m_LocalRotation: {x: -0.036478095, y: 0.36795133, z: 0.013294522, w: 0.9290341}
   m_LocalPosition: {x: -0.012627125, y: 0.10599995, z: -0.020928383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6845,7 +6845,9 @@ PrefabInstance:
       propertyPath: HunterModel
       value: 
       objectReference: {fileID: 403180848932935182}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7360583218494161889, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
+    - {fileID: 7485495067581042704, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
 --- !u!1 &2788138966454730308 stripped
 GameObject:

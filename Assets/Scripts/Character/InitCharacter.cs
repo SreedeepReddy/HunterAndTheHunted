@@ -24,6 +24,8 @@ public class InitCharacter : MonoBehaviour
         this.GetComponent<Outline>().outlineWidth = 10f;
         this.GetComponent<Outline>().enabled = false;
         this.GetComponent<Animator>().enabled = true;
+        this.GetComponent<AmimationHandler>().enabled = true;
+        this.GetComponent<CharacterController>().center = new Vector3(0f,1f,0f);
         skinnedMeshRenderer = SMR_ref.GetComponent<SkinnedMeshRenderer>();
 
         Light spotlight = SpotLight.GetComponent<Light>();
