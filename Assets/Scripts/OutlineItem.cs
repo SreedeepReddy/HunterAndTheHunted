@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+[DefaultExecutionOrder(-16100)]
 public class OutlineItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Outline outline;

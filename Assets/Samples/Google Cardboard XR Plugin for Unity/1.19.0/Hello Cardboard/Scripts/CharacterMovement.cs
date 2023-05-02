@@ -11,8 +11,6 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController charCntrl;
     public PhotonView view;
 
-    private Quaternion Crotation = Quaternion.identity;
-
     void Start()
     {
         charCntrl = GetComponent<CharacterController>();
@@ -52,12 +50,5 @@ public class CharacterMovement : MonoBehaviour
 
             charCntrl.SimpleMove(moveVect);
         }
-        cameraObj.transform.rotation = Quaternion.Euler(0.0f, gameObject.transform.rotation.y * -1.0f, 0.0f);
-    }
-
-    private void LateUpdate()
-    {
-        Crotation.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, cameraObj.transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-        transform.rotation = Crotation;
     }
 }
