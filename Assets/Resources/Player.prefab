@@ -4817,10 +4817,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsCanvas: {fileID: 403180850268081794}
-  character: {fileID: 0}
+  character: {fileID: 2788138966454730308}
   firstSelected: {fileID: 403180849435153166}
   reticle: {fileID: 403180849432565730}
   eventSystem: {fileID: 403180849867826015}
+  isMenuOpen: 0
 --- !u!1 &403180850243391977
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,6 +6814,14 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4176352660792890470, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176352660792890470, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
+      propertyPath: ObservedComponents.Array.data[2]
+      value: 
+      objectReference: {fileID: 6489921666043275716}
     - target: {fileID: 4814682366929903550, guid: 8c946e81384c3764ebaa704c44721185, type: 3}
       propertyPath: myCamera
       value: 

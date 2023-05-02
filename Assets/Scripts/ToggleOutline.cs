@@ -10,13 +10,14 @@ public class ToggleOutline : MonoBehaviour
     private GameObject lastInteractableObject;
     private Outline outline;
 
-    private LineRenderer lineRenderer;
-    public Color raycastColor = Color.red;
+    //private LineRenderer lineRenderer;
+    //public Color raycastColor = Color.red;
 
     public GameObject Pointer;
 
     private void Start()
     {
+        /*
         // Create and configure the Line Renderer component
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.startWidth = 1f;
@@ -24,6 +25,7 @@ public class ToggleOutline : MonoBehaviour
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = raycastColor;
         lineRenderer.endColor = raycastColor;
+        */
     }
 
     private void Update()

@@ -11,6 +11,9 @@ public class OpenSettings : MonoBehaviour
     public GameObject reticle;
     public EventSystem eventSystem;
 
+    [SerializeField]
+    private bool isMenuOpen = false;
+
     public void Resume() 
     {
         eventSystem.GetComponent<StandaloneInputModule>().enabled = false;
@@ -46,7 +49,16 @@ public class OpenSettings : MonoBehaviour
     {
         if (Input.GetButtonDown("js7")) 
         {
-            OpenSettingsMenu();
+            if (!isMenuOpen) 
+            {
+                OpenSettingsMenu();
+                isMenuOpen = true;
+            }
+            else
+            {
+                Resume();
+                isMenuOpen = false;
+            }
         }
     }
 }
