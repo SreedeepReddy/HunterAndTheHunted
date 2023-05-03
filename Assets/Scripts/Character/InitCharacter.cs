@@ -18,6 +18,8 @@ public class InitCharacter : MonoBehaviour
 
     private void InitHunter()
     {
+        GameObject.Find("Session").GetComponent<SessionVariables>().hunterPlayer = gameObject;
+        gameObject.layer = 7;
         this.AddComponent<Outline>();
         this.GetComponent<HunterSpear>().enabled = true;
         this.GetComponent<Outline>().outlineColor = Color.red;

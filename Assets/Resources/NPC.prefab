@@ -121,7 +121,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  hunterLayer:
+    serializedVersion: 2
+    m_Bits: 128
   Walkrange: 15
+  sightRange: 7
   moveSpeed: 200
   decisionTime: {x: 0, y: 2}
   npcCntrl: {fileID: 0}

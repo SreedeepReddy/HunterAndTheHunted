@@ -7,12 +7,16 @@ public class NPCMovementScript : MonoBehaviour
     GameObject hunter;
     NavMeshAgent agent;
 
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask groundLayer, hunterLayer;
 
     // roam
     Vector3 destPoint;
     bool walkpointSet;
     [SerializeField] float Walkrange;
+
+    // 
+    [SerializeField] float sightRange;
+    bool hunterInSight;
 
     public float moveSpeed = 3f;
     [SerializeField] private Vector2 decisionTime = new Vector2(0, 2);
@@ -37,7 +41,7 @@ public class NPCMovementScript : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        hunter = GameObject.Find("Session").GetComponent<SessionVariables>().hunterPlayer;
         //decisionTimeCount = Random.Range(decisionTime.x, decisionTime.y);
         //npcCntrl = GetComponent<CharacterController>();
         //ChooseMoveDirection();
@@ -45,7 +49,11 @@ public class NPCMovementScript : MonoBehaviour
 
     private void Update()
     {
-        Roam();
+        hunterInSight = Physics.CheckSphere(transform.position, sightRange, hunterLayer);
+        if (!hunterInSight)
+            Roam();
+        else
+            runAway();
         //Vector3 moveVect = Vector3.zero;
         //var movement = moveDirections[currentMoveDirection];
         //movement.y = 0f;
@@ -91,5 +99,17 @@ public class NPCMovementScript : MonoBehaviour
         {
             walkpointSet = true;
         }
+    }
+
+    void runAway()
+    {
+        transform.rotation = Quaternion.LookRotation(transform.position - hunter.transform.position);
+
+        Vector3 runTo = transform.position + transform.forward * Walkrange;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(runTo, out hit, 5, 1 << NavMesh.GetAreaFromName("Walkable"));
+
+        agent.SetDestination(hit.position);
     }
 }
