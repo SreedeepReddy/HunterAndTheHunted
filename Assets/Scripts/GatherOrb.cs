@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GatherOrbs : MonoBehaviour
+public class GatherOrb : MonoBehaviour
 {
     private RaycastHit hitInfo;
+
+    // source: https://www.zapsplat.com/music/anime-machine-burst-release-energy/
+    // faudio[0] - Footsteps
+    // faudio[1] - Orb Collection
+    private AudioSource[] faudio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        faudio = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +28,11 @@ public class GatherOrbs : MonoBehaviour
             {
                 GameObject.Find("Session").GetComponent<SessionVariables>().OrbCollected += 1;
                 Destroy(hitInfo.collider.gameObject);
+
+                if (faudio[1].isPlaying == false)
+                {
+                    faudio[1].Play();
+                }
             }
         }
     }
