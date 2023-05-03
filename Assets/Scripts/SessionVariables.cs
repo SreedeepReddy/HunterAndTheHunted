@@ -16,7 +16,7 @@ public class SessionVariables : MonoBehaviour
     public int HuntedCount = 0;
     public int HunterCount = 0;
     public int SpearCount = 3;
-    public string gameEnd = "Game Over!";
+    public string gameEnd = "Game Over";
     public float sessionDuration = 300f;
     public GameObject hunterPlayer;
 
@@ -26,7 +26,7 @@ public class SessionVariables : MonoBehaviour
 
         foreach (GameObject hunted in hunteds)
         {
-            hunted.GetComponent<CharacterMovement>().speed = 0;
+            hunted.GetComponentInChildren<CharacterMovement>().speed = 0;
         }
 
         GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
@@ -38,7 +38,7 @@ public class SessionVariables : MonoBehaviour
 
         GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
 
-        hunter.GetComponent<CharacterMovement>().speed = 0;
+        hunter.GetComponentInChildren<CharacterMovement>().speed = 0;
     }
 
     private void StartGame() 
@@ -49,7 +49,7 @@ public class SessionVariables : MonoBehaviour
 
             foreach (GameObject hunted in hunteds)
             {
-                hunted.GetComponent<CharacterMovement>().speed = 200;
+                hunted.GetComponentInChildren<CharacterMovement>().speed = 200;
             }
 
             GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
@@ -61,7 +61,7 @@ public class SessionVariables : MonoBehaviour
 
             GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
 
-            hunter.GetComponent<CharacterMovement>().speed = 300;
+            hunter.GetComponentInChildren<CharacterMovement>().speed = 300;
             startGameInit = false;
         }
         
@@ -86,33 +86,30 @@ public class SessionVariables : MonoBehaviour
 
     private void OpenEndScreen() 
     {
-        if (endGameInit) 
+        GameObject[] hunteds = GameObject.FindGameObjectsWithTag("Hunted");
+
+        if (gameEnd == "Hunted Win")
         {
-            GameObject[] hunteds = GameObject.FindGameObjectsWithTag("Hunted");
-
-            if (gameEnd == "Hunted Wins!") 
+            foreach (GameObject hunted in hunteds)
             {
-                foreach (GameObject hunted in hunteds)
-                {
-                    hunted.GetComponent<CharacterMovement>().speed = 0;
-                    hunted.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
-                }
+                hunted.GetComponentInChildren<CharacterMovement>().speed = 0;
+                hunted.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
             }
-            
-            GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
-
-            hunter.GetComponent<CharacterMovement>().speed = 0;
-            hunter.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
-
-            Text gameEnds = FindObjectOfType<Text>().text == "Game Over!" ? FindObjectOfType<Text>() : null;
-
-            if (gameEnds != null)
-            {
-                gameEnds.text = gameEnd;
-            }
-            endGameInit = false;
         }
-        
+
+        GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
+
+        hunter.GetComponentInChildren<CharacterMovement>().speed = 0;
+        hunter.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
+
+        Text gameEnds = FindObjectOfType<Text>().text == "Game Over" ? FindObjectOfType<Text>() : null;
+
+        if (gameEnds != null)
+        {
+            gameEnds.text = gameEnd;
+        }
+        this.enabled = false;
+
     }
 
     private void Update()
@@ -130,8 +127,8 @@ public class SessionVariables : MonoBehaviour
             }
             else
             {
-                gameEnd = "Hunted Wins!";
-                Debug.Log("Hunted Wins!");
+                gameEnd = "Hunted Win";
+                Debug.Log("Hunted Win");
                 OpenEndScreen();
             }
         }
@@ -144,15 +141,15 @@ public class SessionVariables : MonoBehaviour
 
         if (gameStarted && HuntedCount == 0) 
         {
-            gameEnd = "Hunter Wins!";
-            Debug.Log("Hunter Wins!");
+            gameEnd = "Hunter Wins";
+            Debug.Log("Hunter Wins");
             OpenEndScreen();
         }
 
         if (gameStarted && SpearCount == 0) 
         {
-            gameEnd = "Hunted Wins!";
-            Debug.Log("Hunted Wins!");
+            gameEnd = "Hunted Win";
+            Debug.Log("Hunted Win");
             OpenEndScreen();
         }
 
@@ -163,8 +160,8 @@ public class SessionVariables : MonoBehaviour
 
         if (OrbCollected == 5) 
         {
-            gameEnd = "Hunted Wins!";
-            Debug.Log("Hunted Wins!");
+            gameEnd = "Hunted Win";
+            Debug.Log("Hunted Win");
             OpenEndScreen();
         }
     }

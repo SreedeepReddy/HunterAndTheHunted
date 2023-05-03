@@ -118,7 +118,7 @@ public class HunterSpear : MonoBehaviour
                 GameObject hunted = hitInfo.collider.gameObject;
                 Destroy(hunted.GetComponent<MeshFilter>().mesh);
                 hunted.GetComponent<CapsuleCollider>().enabled = false;
-                hunted.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
+                hunted.transform.parent.gameObject.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
             }
         }
     }

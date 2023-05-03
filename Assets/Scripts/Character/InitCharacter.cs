@@ -43,7 +43,7 @@ public class InitCharacter : MonoBehaviour
         spotlight.AddComponent<RenderLight>();
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, true);
-        this.gameObject.tag = "Hunter";
+        this.transform.parent.gameObject.tag = "Hunter";
         this.GetComponent<InitCharacter>().enabled = false;
     }
 
@@ -61,7 +61,7 @@ public class InitCharacter : MonoBehaviour
         renderer.material = huntedBlue;
 
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, false);
-        this.gameObject.tag = "Hunted";
+        this.transform.parent.gameObject.tag = "Hunted";
         this.GetComponent<InitCharacter>().enabled = false;
     }
 
