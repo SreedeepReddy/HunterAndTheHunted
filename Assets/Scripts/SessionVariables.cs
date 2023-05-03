@@ -19,6 +19,7 @@ public class SessionVariables : MonoBehaviour
     public string gameEnd = "Game Over";
     public float sessionDuration = 300f;
     public GameObject hunterPlayer;
+    public int totalNonHunter;
 
     private void PauseGame()
     {
@@ -63,6 +64,8 @@ public class SessionVariables : MonoBehaviour
             GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
 
             hunter.GetComponentInChildren<CharacterMovement>().speed = 300;
+
+            totalNonHunter = HuntedCount + NPCCount;
             hunter.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
             startGameInit = false;
         }
@@ -139,7 +142,7 @@ public class SessionVariables : MonoBehaviour
             }
         }
 
-        if (HuntedCount >= 2 && HunterCount == 1) 
+        if (HuntedCount >= 2 && HunterCount == 1 && gameStarted == false) 
         {
             gameStarted = true;
             StartGame();
@@ -152,7 +155,7 @@ public class SessionVariables : MonoBehaviour
             OpenEndScreen();
         }
 
-        if (gameStarted && SpearCount == 0) 
+        if (gameStarted && totalNonHunter - (HuntedCount + NPCCount) > 6) 
         {
             gameEnd = "Hunted Win";
             Debug.Log("Hunted Win");
@@ -164,7 +167,7 @@ public class SessionVariables : MonoBehaviour
             DisableHunterSelection();
         }
 
-        if (OrbCollected == 5) 
+        if (OrbCollected == 10) 
         {
             gameEnd = "Hunted Win";
             Debug.Log("Hunted Win");
