@@ -934,6 +934,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CharacterController_SimpleMove_Injected_m0E3E4E6152A40139CE3B8B2FA65FF941FD976656 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_speed, const RuntimeMethod* method) ;
 // System.Void UnityEngine.CharacterController::get_velocity_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_get_velocity_Injected_m30E51269762EE6648DA19F595925C4C04394B316 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) ;
+// System.Void UnityEngine.CharacterController::set_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.CapsuleCollider::get_center_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CapsuleCollider_get_center_Injected_m1E3350EFCD134943AE30B4D76D1767AA080A4BD2 (CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) ;
 // System.Void UnityEngine.CapsuleCollider::set_center_Injected(UnityEngine.Vector3&)
@@ -2745,6 +2747,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CharacterController_get_height_m18EC4D9
 	float icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
+// System.Void UnityEngine.CharacterController::set_center(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_center_mF22160684B1FB453417D5457B14FEF437B5646EB (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980(__this, (&___0_value), NULL);
+		return;
+	}
+}
 // System.Boolean UnityEngine.CharacterController::SimpleMove_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CharacterController_SimpleMove_Injected_m0E3E4E6152A40139CE3B8B2FA65FF941FD976656 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_speed, const RuntimeMethod* method) 
 {
@@ -2763,6 +2773,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_get_velocity_Injecte
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (CharacterController_get_velocity_Injected_m30E51269762EE6648DA19F595925C4C04394B316_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CharacterController::get_velocity_Injected(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___0_ret);
+}
+// System.Void UnityEngine.CharacterController::set_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980 (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980_ftn) (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*);
+	static CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CharacterController::set_center_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___0_value);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

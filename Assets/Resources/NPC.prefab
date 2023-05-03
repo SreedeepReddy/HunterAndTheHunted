@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8960110269492544597}
   - component: {fileID: 2663417610928173595}
   - component: {fileID: 2244354922922573655}
+  - component: {fileID: 2664124122568336601}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -117,6 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa8c14d896ea94095e32702c3ac8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  Walkrange: 15
   moveSpeed: 200
   decisionTime: {x: 0, y: 2}
   npcCntrl: {fileID: 0}
@@ -287,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6555e7e1f35d343901cd0982d60adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNpc: 1
 --- !u!114 &2244354922922573655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,3 +309,25 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!195 &2664124122568336601
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512297506852211083}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 200
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

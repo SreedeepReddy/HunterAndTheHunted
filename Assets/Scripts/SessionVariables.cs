@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using Photon.Pun;
 
 public class SessionVariables : MonoBehaviour
@@ -31,7 +32,7 @@ public class SessionVariables : MonoBehaviour
 
         foreach (GameObject npc in npcs)
         {
-            npc.GetComponent<NPCMovementScript>().moveSpeed = 0;
+            npc.GetComponent<NavMeshAgent>().speed = 0;
         }
 
         GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
@@ -54,7 +55,7 @@ public class SessionVariables : MonoBehaviour
 
             foreach (GameObject npc in npcs)
             {
-                npc.GetComponent<NPCMovementScript>().moveSpeed = 200;
+                npc.GetComponent<NavMeshAgent>().speed = 3;
             }
 
             GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
