@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class GameEnds : MonoBehaviour
 {
@@ -12,7 +13,12 @@ public class GameEnds : MonoBehaviour
     public GameObject firstSelected;
     public GameObject reticle;
     public EventSystem eventSystem;
+    public TMP_Text gameStateText;
+    public string gamestatetxt = "GameOver";
 
+    private void Start()
+    {
+    }
     public void MainMenu()
     {
         PhotonNetwork.LeaveRoom();
@@ -26,6 +32,7 @@ public class GameEnds : MonoBehaviour
 
     public void OpenGameEndMenu()
     {
+        gameStateText.text = gamestatetxt;
         character.GetComponent<CharacterMovement>().speed = 0;
         reticle.SetActive(false);
         eventSystem.GetComponent<XRCardboardInputModule>().enabled = false;

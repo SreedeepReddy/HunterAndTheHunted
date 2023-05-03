@@ -50,6 +50,7 @@ public class SessionVariables : MonoBehaviour
             foreach (GameObject hunted in hunteds)
             {
                 hunted.GetComponentInChildren<CharacterMovement>().speed = 200;
+                hunted.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
             }
 
             GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
@@ -62,6 +63,7 @@ public class SessionVariables : MonoBehaviour
             GameObject hunter = GameObject.FindGameObjectWithTag("Hunter");
 
             hunter.GetComponentInChildren<CharacterMovement>().speed = 300;
+            hunter.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
             startGameInit = false;
         }
         
@@ -94,6 +96,7 @@ public class SessionVariables : MonoBehaviour
             {
                 hunted.GetComponentInChildren<CharacterMovement>().speed = 0;
                 hunted.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
+                hunted.GetComponentInChildren<GameEnds>().gamestatetxt = gameEnd;
             }
         }
 
@@ -101,13 +104,16 @@ public class SessionVariables : MonoBehaviour
 
         hunter.GetComponentInChildren<CharacterMovement>().speed = 0;
         hunter.GetComponentInChildren<GameEnds>().OpenGameEndMenu();
+        hunter.GetComponentInChildren<GameEnds>().gamestatetxt = gameEnd;
 
+        /*
         Text gameEnds = FindObjectOfType<Text>().text == "Game Over" ? FindObjectOfType<Text>() : null;
 
         if (gameEnds != null)
         {
             gameEnds.text = gameEnd;
         }
+        */
         this.enabled = false;
 
     }
