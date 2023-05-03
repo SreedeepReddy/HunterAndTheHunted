@@ -1191,6 +1191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &873003143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7287137019707172516, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
+  m_PrefabInstance: {fileID: 873003138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1090599110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1244,7 @@ MonoBehaviour:
   firstSelected: {fileID: 626775599}
   reticle: {fileID: 873003141}
   eventSystem: {fileID: 873003142}
+  VRGroup: {fileID: 873003143}
 --- !u!1 &1179539934
 GameObject:
   m_ObjectHideFlags: 0
