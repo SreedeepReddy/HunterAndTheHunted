@@ -20,7 +20,8 @@ public class GatherOrb : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetButtonDown("js10"))
+        // collect key
+        if (Input.GetButtonDown("js10") && GetComponent<SetCharacter>().isHunted == true)
         {
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
@@ -33,6 +34,17 @@ public class GatherOrb : MonoBehaviour
                 {
                     faudio[1].Play();
                 }
+            }
+        }
+        // Collect spear
+        if (Input.GetButtonDown("js10") && GetComponent<SetCharacter>().isHunter == true)
+        {
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+            if (Physics.Raycast(ray, out hitInfo) && hitInfo.collider.gameObject.name.Contains("Spear"))
+            {
+                GameObject.Find("Session").GetComponent<SessionVariables>().SpearCount += 1;
+                Destroy(hitInfo.collider.gameObject);
             }
         }
     }

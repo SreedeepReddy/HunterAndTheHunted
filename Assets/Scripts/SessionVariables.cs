@@ -15,7 +15,7 @@ public class SessionVariables : MonoBehaviour
     //public int PlayerCount = 0;
     public int HuntedCount = 0;
     public int HunterCount = 0;
-    public int SpearCount = 3;
+    public int SpearCount = 0;
     public string gameEnd = "Game Over";
     public float sessionDuration = 300f;
     public GameObject hunterPlayer;
