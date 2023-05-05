@@ -80,7 +80,7 @@ public class HunterSpear : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("js10"))
+        if (Input.GetButtonDown("js10") && GameObject.Find("Session").GetComponent<SessionVariables>().SpearCount > 0)
         {
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
