@@ -11,7 +11,7 @@ public class SessionVariables : MonoBehaviour
     private bool startGameInit = true;
     private bool endGameInit = true;
     public int OrbCollected = 0;
-    public int NPCCount = 5;
+    public int NPCCount = 0;
     //public int PlayerCount = 0;
     public int HuntedCount = 0;
     public int HunterCount = 0;

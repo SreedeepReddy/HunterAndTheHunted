@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 public class SpawnNPC : MonoBehaviour
 {
     public GameObject npc;
+    public int npcAmt = 10;
 
     public float minX;
     public float maxX;
@@ -17,12 +18,14 @@ public class SpawnNPC : MonoBehaviour
 
     private void Start()
     {
+        GameObject session = GameObject.Find("Session");
         // Call the SpawnPlayer method with a delay of 2 seconds
-        Invoke("SpawnNPCs", startDelay);
-        Invoke("SpawnNPCs", startDelay);
-        Invoke("SpawnNPCs", startDelay);
-        Invoke("SpawnNPCs", startDelay);
-        Invoke("SpawnNPCs", startDelay);
+        while (session.GetComponent<SessionVariables>().NPCCount < npcAmt)
+        {
+            Invoke("SpawnNPCs", startDelay);
+            session.GetComponent<SessionVariables>().NPCCount++;
+        }
+        
     }
 
     private void SpawnNPCs()
