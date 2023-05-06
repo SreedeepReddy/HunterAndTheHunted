@@ -54,6 +54,12 @@ MonoBehaviour:
   - UpdateOrbCollected
   - UpdateSessionDuration
   - UpdateSpearCount
+  - UpdateGameStartedRPC
+  - UpdateHuntedCountRPC
+  - UpdateHunterCountRPC
+  - UpdateNPCCountRPC
+  - UpdateOrbCollectedRPC
+  - UpdateSpearCountRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

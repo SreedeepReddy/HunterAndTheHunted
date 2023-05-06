@@ -8,42 +8,123 @@ using Photon.Realtime;
 
 public class SessionVariables : MonoBehaviour
 {
-    /*
+    private bool prevGameStarted;
+    private int prevOrbCollected;
+    private int prevNPCCount;
+    private int prevHuntedCount;
+    private int prevHunterCount;
+    private int prevSpearCount;
+    private string prevGameEnd;
+    private float prevSessionDuration;
+
+    
     public PhotonView photonView;
 
     [PunRPC]
     void UpdateGameStarted(bool value)
     {
+        if (prevGameStarted != value)
+        {
+            prevGameStarted = value;
+            gameStarted = value;
+            photonView.RPC("UpdateGameStartedRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateGameStartedRPC(bool value)
+    {
+        prevGameStarted = value;
         gameStarted = value;
     }
 
     [PunRPC]
     void UpdateOrbCollected(int value)
     {
+        if (prevOrbCollected != value)
+        {
+            prevOrbCollected = value;
+            OrbCollected = value;
+            photonView.RPC("UpdateOrbCollectedRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateOrbCollectedRPC(int value)
+    {
+        prevOrbCollected = value;
         OrbCollected = value;
     }
 
     [PunRPC]
     void UpdateNPCCount(int value)
     {
+        if (prevNPCCount != value)
+        {
+            prevNPCCount = value;
+            NPCCount = value;
+            photonView.RPC("UpdateNPCCountRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateNPCCountRPC(int value)
+    {
+        prevNPCCount = value;
         NPCCount = value;
     }
 
     [PunRPC]
     void UpdateHuntedCount(int value)
     {
+        if (prevHuntedCount != value)
+        {
+            prevHuntedCount = value;
+            HuntedCount = value;
+            photonView.RPC("UpdateHuntedCountRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateHuntedCountRPC(int value)
+    {
+        prevHuntedCount = value;
         HuntedCount = value;
     }
 
     [PunRPC]
     void UpdateHunterCount(int value)
     {
+        if (prevHunterCount != value)
+        {
+            prevHunterCount = value;
+            HunterCount = value;
+            photonView.RPC("UpdateHunterCountRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateHunterCountRPC(int value)
+    {
+        prevHunterCount = value;
         HunterCount = value;
     }
 
     [PunRPC]
     void UpdateSpearCount(int value)
     {
+        if (prevSpearCount != value)
+        {
+            prevSpearCount = value;
+            SpearCount = value;
+            photonView.RPC("UpdateSpearCountRPC", RpcTarget.Others, value);
+        }
+    }
+
+    [PunRPC]
+    void UpdateSpearCountRPC(int value)
+    {
+        prevSpearCount = value;
         SpearCount = value;
     }
 
@@ -58,7 +139,6 @@ public class SessionVariables : MonoBehaviour
     {
         sessionDuration = value;
     }
-    */
 
     public bool gameStarted = false;
     [SerializeField]
