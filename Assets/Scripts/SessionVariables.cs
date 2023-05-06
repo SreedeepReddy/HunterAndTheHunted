@@ -61,6 +61,7 @@ public class SessionVariables : MonoBehaviour
     */
 
     public bool gameStarted = false;
+    [SerializeField]
     private bool startGameInit = true;
     private bool endGameInit = true;
     public int OrbCollected = 0;
