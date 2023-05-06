@@ -45,6 +45,7 @@ public class InitCharacter : MonoBehaviour
         photonView.RPC(nameof(SyncMaterial), RpcTarget.OthersBuffered, true);
         this.transform.parent.gameObject.tag = "Hunter";
         this.GetComponent<InitCharacter>().enabled = false;
+        GameObject.Find("SpawnNPC").GetComponent<SpawnNPC>().enabled = true;
     }
 
     private void InitHunted()
