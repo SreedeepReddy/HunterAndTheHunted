@@ -13,14 +13,18 @@ public class MenuController : MonoBehaviour
 
     private bool menuControlled = false;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+    }
     void MenuControl()
     {
         EventSystem.current.SetSelectedGameObject(null);
         reticle.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
-        eventSystem.GetComponent<XRCardboardInputModule>().enabled = false;
+        //eventSystem.GetComponent<XRCardboardInputModule>().enabled = false;
         eventSystem.GetComponent<StandaloneInputModule>().enabled = true;
-        EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstSelected);
     }
 
@@ -28,10 +32,15 @@ public class MenuController : MonoBehaviour
     {
         if (!menuControlled) 
         {
-            if (VRGroup.activeSelf) 
+            if (VRGroup.activeSelf)
             {
+                EventSystem.current.SetSelectedGameObject(null);
                 MenuControl();
                 menuControlled = true;
+            }
+            else 
+            {
+                EventSystem.current.SetSelectedGameObject(null);
             }
         }
     }

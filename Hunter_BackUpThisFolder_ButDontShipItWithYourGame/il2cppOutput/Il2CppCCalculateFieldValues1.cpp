@@ -20748,20 +20748,22 @@ struct SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D  : public MonoBehaviou
 {
 	// UnityEngine.GameObject SpawnNPC::npc
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___npc_4;
+	// System.Int32 SpawnNPC::npcAmt
+	int32_t ___npcAmt_5;
 	// System.Single SpawnNPC::minX
-	float ___minX_5;
+	float ___minX_6;
 	// System.Single SpawnNPC::maxX
-	float ___maxX_6;
+	float ___maxX_7;
 	// System.Single SpawnNPC::minY
-	float ___minY_7;
+	float ___minY_8;
 	// System.Single SpawnNPC::maxY
-	float ___maxY_8;
+	float ___maxY_9;
 	// System.Single SpawnNPC::minZ
-	float ___minZ_9;
+	float ___minZ_10;
 	// System.Single SpawnNPC::maxZ
-	float ___maxZ_10;
+	float ___maxZ_11;
 	// System.Single SpawnNPC::startDelay
-	float ___startDelay_11;
+	float ___startDelay_12;
 };
 
 // SpawnPlayers
@@ -42265,9 +42267,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5831[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5832[3] = 
 {
 	static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___vrGroup_4)),static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___firstSelected_5)),static_cast<int32_t>(offsetof(SetFirstSelectedOnEnableVR_t21FB1AFB677F084D5C8E8907FC34B9048EBB1CC6, ___eventSystem_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5833[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5833[9] = 
 {
-	static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___npc_4)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minX_5)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxX_6)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minY_7)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxY_8)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minZ_9)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxZ_10)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___startDelay_11)),};
+	static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___npc_4)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___npcAmt_5)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minX_6)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxX_7)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minY_8)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxY_9)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___minZ_10)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___maxZ_11)),static_cast<int32_t>(offsetof(SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D, ___startDelay_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5834[1] = 
 {
 	static_cast<int32_t>(offsetof(ConnectToServer_t5D0F48981ADA8F7FBC3BB63AC82ED22DA3311EAB, ___g_gameversion_5)),};

@@ -10420,20 +10420,22 @@ struct SpawnNPC_t36165E1E0D015D84035099B4B022CEF5784C471D  : public MonoBehaviou
 {
 	// UnityEngine.GameObject SpawnNPC::npc
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___npc_4;
+	// System.Int32 SpawnNPC::npcAmt
+	int32_t ___npcAmt_5;
 	// System.Single SpawnNPC::minX
-	float ___minX_5;
+	float ___minX_6;
 	// System.Single SpawnNPC::maxX
-	float ___maxX_6;
+	float ___maxX_7;
 	// System.Single SpawnNPC::minY
-	float ___minY_7;
+	float ___minY_8;
 	// System.Single SpawnNPC::maxY
-	float ___maxY_8;
+	float ___maxY_9;
 	// System.Single SpawnNPC::minZ
-	float ___minZ_9;
+	float ___minZ_10;
 	// System.Single SpawnNPC::maxZ
-	float ___maxZ_10;
+	float ___maxZ_11;
 	// System.Single SpawnNPC::startDelay
-	float ___startDelay_11;
+	float ___startDelay_12;
 };
 
 // SpawnPlayers
