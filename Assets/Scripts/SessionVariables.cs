@@ -8,6 +8,7 @@ using Photon.Realtime;
 
 public class SessionVariables : MonoBehaviour
 {
+    /*
     private bool prevGameStarted;
     private int prevOrbCollected;
     private int prevNPCCount;
@@ -19,7 +20,7 @@ public class SessionVariables : MonoBehaviour
 
     
     public PhotonView photonView;
-
+    
     [PunRPC]
     void UpdateGameStarted(bool value)
     {
@@ -138,7 +139,7 @@ public class SessionVariables : MonoBehaviour
     void UpdateSessionDuration(float value)
     {
         sessionDuration = value;
-    }
+    }*/
 
     public bool gameStarted = false;
     [SerializeField]
