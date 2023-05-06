@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 public class SpawnNPC : MonoBehaviour
 {
     public GameObject npc;
-    public int npcAmt = 10;
+    public int npcAmt = 3;
 
     public float minX;
     public float maxX;
