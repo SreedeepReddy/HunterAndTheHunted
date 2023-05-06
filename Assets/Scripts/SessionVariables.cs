@@ -211,7 +211,7 @@ public class SessionVariables : MonoBehaviour
             }
         }
 
-        if (HuntedCount >= 2 && HunterCount == 1 && gameStarted == false) 
+        if (HuntedCount >= 2 && HunterCount == 1) 
         {
             gameStarted = true;
             StartGame();
