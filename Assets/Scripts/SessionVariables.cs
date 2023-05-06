@@ -8,7 +8,9 @@ using Photon.Realtime;
 
 public class SessionVariables : MonoBehaviour
 {
-    /*public PhotonView photonView;
+    /*
+    public PhotonView photonView;
+
     [PunRPC]
     void UpdateGameStarted(bool value)
     {
@@ -55,7 +57,9 @@ public class SessionVariables : MonoBehaviour
     void UpdateSessionDuration(float value)
     {
         sessionDuration = value;
-    }*/
+    }
+    */
+
     public bool gameStarted = false;
     private bool startGameInit = true;
     private bool endGameInit = true;
@@ -175,7 +179,8 @@ public class SessionVariables : MonoBehaviour
 
     private void Update()
     {
-        /*if (PhotonNetwork.IsMasterClient)
+        /*
+        if (PhotonNetwork.IsMasterClient)
         {
             photonView.RPC("UpdateGameStarted", RpcTarget.All, gameStarted);
             photonView.RPC("UpdateOrbCollected", RpcTarget.All, OrbCollected);
@@ -185,8 +190,8 @@ public class SessionVariables : MonoBehaviour
             photonView.RPC("UpdateSpearCount", RpcTarget.All, SpearCount);
             photonView.RPC("UpdateGameEnd", RpcTarget.All, gameEnd);
             photonView.RPC("UpdateSessionDuration", RpcTarget.All, sessionDuration);
-        }*/
-
+        }
+        */
         if (!gameStarted)
         {
             PauseGame();
