@@ -43,6 +43,17 @@ MonoBehaviour:
   - SetIsHunted
   - SetIsHunter
   - SyncMesh
+  - DisableHunterSelection
+  - OpenEndScreen
+  - StartGame
+  - UpdateGameEnd
+  - UpdateGameStarted
+  - UpdateHuntedCount
+  - UpdateHunterCount
+  - UpdateNPCCount
+  - UpdateOrbCollected
+  - UpdateSessionDuration
+  - UpdateSpearCount
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

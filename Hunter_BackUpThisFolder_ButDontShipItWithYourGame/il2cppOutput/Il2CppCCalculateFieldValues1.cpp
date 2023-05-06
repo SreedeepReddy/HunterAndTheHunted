@@ -20620,30 +20620,32 @@ struct ServerAddressProperty_tDB97A0E6C22E76B9DBCD22C957E7AEBBF7B2E343  : public
 // SessionVariables
 struct SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// Photon.Pun.PhotonView SessionVariables::photonView
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_4;
 	// System.Boolean SessionVariables::gameStarted
-	bool ___gameStarted_4;
+	bool ___gameStarted_5;
 	// System.Boolean SessionVariables::startGameInit
-	bool ___startGameInit_5;
+	bool ___startGameInit_6;
 	// System.Boolean SessionVariables::endGameInit
-	bool ___endGameInit_6;
+	bool ___endGameInit_7;
 	// System.Int32 SessionVariables::OrbCollected
-	int32_t ___OrbCollected_7;
+	int32_t ___OrbCollected_8;
 	// System.Int32 SessionVariables::NPCCount
-	int32_t ___NPCCount_8;
+	int32_t ___NPCCount_9;
 	// System.Int32 SessionVariables::HuntedCount
-	int32_t ___HuntedCount_9;
+	int32_t ___HuntedCount_10;
 	// System.Int32 SessionVariables::HunterCount
-	int32_t ___HunterCount_10;
+	int32_t ___HunterCount_11;
 	// System.Int32 SessionVariables::SpearCount
-	int32_t ___SpearCount_11;
+	int32_t ___SpearCount_12;
 	// System.String SessionVariables::gameEnd
-	String_t* ___gameEnd_12;
+	String_t* ___gameEnd_13;
 	// System.Single SessionVariables::sessionDuration
-	float ___sessionDuration_13;
+	float ___sessionDuration_14;
 	// UnityEngine.GameObject SessionVariables::hunterPlayer
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hunterPlayer_14;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hunterPlayer_15;
 	// System.Int32 SessionVariables::totalNonHunter
-	int32_t ___totalNonHunter_15;
+	int32_t ___totalNonHunter_16;
 };
 
 // SetCharacter
@@ -42336,9 +42338,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5858[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5859[1] = 
 {
 	static_cast<int32_t>(offsetof(RotateCharacter_t641CBEE3FD89EECE8CF299E669BA9DBF8B86DFC8, ___mainCamera_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5860[12] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5860[13] = 
 {
-	static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___gameStarted_4)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___startGameInit_5)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___endGameInit_6)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___OrbCollected_7)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___NPCCount_8)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___HuntedCount_9)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___HunterCount_10)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___SpearCount_11)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___gameEnd_12)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___sessionDuration_13)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___hunterPlayer_14)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___totalNonHunter_15)),};
+	static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___photonView_4)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___gameStarted_5)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___startGameInit_6)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___endGameInit_7)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___OrbCollected_8)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___NPCCount_9)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___HuntedCount_10)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___HunterCount_11)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___SpearCount_12)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___gameEnd_13)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___sessionDuration_14)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___hunterPlayer_15)),static_cast<int32_t>(offsetof(SessionVariables_tC439342878D4FCBEDAE523B0F5A47DD3C609C7B0, ___totalNonHunter_16)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5861[8] = 
 {
 	static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___player_4)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___minX_5)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___maxX_6)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___minY_7)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___maxY_8)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___minZ_9)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___maxZ_10)),static_cast<int32_t>(offsetof(SpawnPlayers_t066476425C92B95B54A302EA12A5499BF777BE1C, ___startDelay_11)),};

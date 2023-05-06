@@ -4,9 +4,58 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class SessionVariables : MonoBehaviour
 {
+    public PhotonView photonView;
+    [PunRPC]
+    void UpdateGameStarted(bool value)
+    {
+        gameStarted = value;
+    }
+
+    [PunRPC]
+    void UpdateOrbCollected(int value)
+    {
+        OrbCollected = value;
+    }
+
+    [PunRPC]
+    void UpdateNPCCount(int value)
+    {
+        NPCCount = value;
+    }
+
+    [PunRPC]
+    void UpdateHuntedCount(int value)
+    {
+        HuntedCount = value;
+    }
+
+    [PunRPC]
+    void UpdateHunterCount(int value)
+    {
+        HunterCount = value;
+    }
+
+    [PunRPC]
+    void UpdateSpearCount(int value)
+    {
+        SpearCount = value;
+    }
+
+    [PunRPC]
+    void UpdateGameEnd(string value)
+    {
+        gameEnd = value;
+    }
+
+    [PunRPC]
+    void UpdateSessionDuration(float value)
+    {
+        sessionDuration = value;
+    }
     public bool gameStarted = false;
     private bool startGameInit = true;
     private bool endGameInit = true;
@@ -42,6 +91,7 @@ public class SessionVariables : MonoBehaviour
         hunter.GetComponentInChildren<CharacterMovement>().speed = 0;
     }
 
+    [PunRPC]
     private void StartGame() 
     {
         if (startGameInit) 
@@ -72,6 +122,7 @@ public class SessionVariables : MonoBehaviour
         
     }
 
+    [PunRPC]
     private void DisableHunterSelection() 
     {
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
@@ -89,6 +140,7 @@ public class SessionVariables : MonoBehaviour
         }
     }
 
+    [PunRPC]
     private void OpenEndScreen() 
     {
         GameObject[] hunteds = GameObject.FindGameObjectsWithTag("Hunted");
@@ -123,6 +175,18 @@ public class SessionVariables : MonoBehaviour
 
     private void Update()
     {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("UpdateGameStarted", RpcTarget.All, gameStarted);
+            photonView.RPC("UpdateOrbCollected", RpcTarget.All, OrbCollected);
+            photonView.RPC("UpdateNPCCount", RpcTarget.All, NPCCount);
+            photonView.RPC("UpdateHuntedCount", RpcTarget.All, HuntedCount);
+            photonView.RPC("UpdateHunterCount", RpcTarget.All, HunterCount);
+            photonView.RPC("UpdateSpearCount", RpcTarget.All, SpearCount);
+            photonView.RPC("UpdateGameEnd", RpcTarget.All, gameEnd);
+            photonView.RPC("UpdateSessionDuration", RpcTarget.All, sessionDuration);
+        }
+
         if (!gameStarted)
         {
             PauseGame();
