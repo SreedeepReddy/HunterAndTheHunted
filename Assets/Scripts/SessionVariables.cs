@@ -106,7 +106,7 @@ public class SessionVariables : MonoBehaviour
             foreach (GameObject hunted in hunteds)
             {
                 hunted.GetComponentInChildren<CharacterMovement>().speed = 200;
-                hunted.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
+                //hunted.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
             }
 
             GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
@@ -121,7 +121,7 @@ public class SessionVariables : MonoBehaviour
             hunter.GetComponentInChildren<CharacterMovement>().speed = 300;
 
             totalNonHunter = HuntedCount + NPCCount;
-            hunter.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
+            //hunter.transform.parent.Find("HUD").GetComponent<TimerCountDown>().gameStart = true;
             startGameInit = false;
         }
         
